@@ -260,7 +260,7 @@ func TestAccAWSAPIGatewayUsagePlan_throttling(t *testing.T) {
 	})
 }
 
-// https://github.com/terraform-providers/terraform-provider-aws/issues/2057
+// https://github.com/hashicorp/terraform-provider-aws/issues/2057
 func TestAccAWSAPIGatewayUsagePlan_throttlingInitialRateLimit(t *testing.T) {
 	var conf apigateway.UsagePlan
 	rName := fmt.Sprintf("tf-acc-test-%s", acctest.RandString(10))
