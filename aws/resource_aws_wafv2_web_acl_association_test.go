@@ -17,7 +17,7 @@ func TestAccAwsWafv2WebACLAssociation_basic(t *testing.T) {
 	resourceName := "aws_wafv2_web_acl_association.test"
 
 	resource.ParallelTest(t, resource.TestCase{
-		PreCheck:     func() { testAccPreCheck(t) },
+		PreCheck:     func() { testAccPreCheck(t); testAccPreCheckAWSWafv2(t) },
 		Providers:    testAccProviders,
 		CheckDestroy: testAccCheckAWSWafv2WebACLAssociationDestroy,
 		Steps: []resource.TestStep{
@@ -44,7 +44,7 @@ func TestAccAwsWafv2WebACLAssociation_Disappears(t *testing.T) {
 	resourceName := "aws_wafv2_web_acl_association.test"
 
 	resource.ParallelTest(t, resource.TestCase{
-		PreCheck:     func() { testAccPreCheck(t) },
+		PreCheck:     func() { testAccPreCheck(t); testAccPreCheckAWSWafv2(t) },
 		Providers:    testAccProviders,
 		CheckDestroy: testAccCheckAWSWafv2WebACLAssociationDestroy,
 		Steps: []resource.TestStep{
